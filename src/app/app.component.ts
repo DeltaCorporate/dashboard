@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard';
-  showNav:boolean = true;
+  public showNav:any;
+  public width: any;
+
+
+  ngOnInit(){
+    this.width = window.innerWidth;
+    this.showNav = this.width>800
+  }
+
+  @HostListener("window:resize",["$event"])
+
+  onWindowResize(){
+    this.width = window.innerWidth;
+    this.showNav = this.width>800
+  }
+
 
   toggleSideNav(){
     this.showNav = !this.showNav;

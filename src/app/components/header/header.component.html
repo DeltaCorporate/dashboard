@@ -1,3 +1,15 @@
-<button class="text ">
-  <mat-icon (click)="toggleSideNav()">widgets</mat-icon>
-</button>
+<div class="bg-white border-b px-2 py-4 flex">
+  <button class="text ">
+    <mat-icon (click)="toggleSideNav()">menu</mat-icon>
+  </button>
+  <div class="ml-auto">
+    <button mat-button  [matMenuTriggerFor]="menu" class="text bg-gray-100">Logged as admin@hyarotech.com</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+  </div>
+</div>

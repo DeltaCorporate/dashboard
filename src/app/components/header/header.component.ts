@@ -1,9 +1,10 @@
-import {Component, Input, Output, OnInit, EventEmitter} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
   @Input() showNav: boolean | undefined;

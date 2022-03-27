@@ -12,22 +12,33 @@ import { Test1Component } from './pages/test1/test1.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HeaderComponent } from './components/header/header.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from "@angular/material/select";
+import {MatMenuModule} from "@angular/material/menu";
+import { ListComponent } from './pages/store/list/list.component';
+import {CardComponent} from "./components/Store/card/card.component";
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     Test1Component,
     SidenavComponent,
-    HeaderComponent
+    HeaderComponent,
+    ListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatGridListModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

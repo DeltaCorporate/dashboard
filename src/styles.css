@@ -9,3 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text{
   @apply text-gray-600
 }
+
+.debug{
+  @apply border border-2 border-red-500
+}
