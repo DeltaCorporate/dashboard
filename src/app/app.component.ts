@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard';
+  showNav:boolean = true;
+
+  toggleSideNav(){
+    this.showNav = !this.showNav;
+  }
 }
+
