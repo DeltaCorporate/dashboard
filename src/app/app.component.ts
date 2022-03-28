@@ -9,11 +9,13 @@ export class AppComponent {
   title = 'dashboard';
   public showNav:any;
   public width: any;
+  public mode:any;
 
 
   ngOnInit(){
     this.width = window.innerWidth;
     this.showNav = this.width>800
+    this.showNav ? this.mode = "side" :this.mode = "push";
   }
 
   @HostListener("window:resize",["$event"])
@@ -21,6 +23,7 @@ export class AppComponent {
   onWindowResize(){
     this.width = window.innerWidth;
     this.showNav = this.width>800
+    this.showNav ? this.mode = "side" :this.mode = "push";
   }
 
 

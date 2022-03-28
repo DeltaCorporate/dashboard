@@ -1,5 +1,5 @@
-  <mat-drawer-container class="min-h-screen">
-    <mat-drawer mode="side" [opened]="showNav">
+  <mat-drawer-container class="min-h-screen" hasBackdrop="false">
+    <mat-drawer [mode]="mode"  [opened]="showNav">
       <app-sidenav></app-sidenav>
     </mat-drawer>
     <mat-drawer-content>
